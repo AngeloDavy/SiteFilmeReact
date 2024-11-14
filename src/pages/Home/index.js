@@ -6,27 +6,12 @@ import Header from "../../components/Header";
 import CategoryMap from "../../components/RepetCategory";
 
 function Home() {
-
-  function pegarNome(e){
-    setNome(e.target.value)
-  }
-
-  const [nome, setNome] = useState()
-
   return (
     <div>
       <Header />
       <Banner image="home" />
       <Container>
-
-      <input 
-        type="text"
-        placeholder="Nome"
-        onChange={pegarNome}
-      />
-      <h2>{nome}</h2>
-
-        {/*<CategoryMap />*/}
+        <CategoryMap />
       </Container>
       <Footer />
     </div>
