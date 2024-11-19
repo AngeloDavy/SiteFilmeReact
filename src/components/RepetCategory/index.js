@@ -1,6 +1,7 @@
 import Card from "../Card";
 import Category from "../Category";
 import videos from "../../json/videos.json";
+import Carousel from "../Carousel";
 
 const categories = [
   "Geografia",
@@ -19,9 +20,11 @@ function CategoryMap() {
     <>
       {categories.map((category, index) => (
         <Category category={category} key={index}>
+          <Carousel>
           {filterCategory(index).map((video) => (
             <Card id={video.id} key={video.id} />
           ))}
+        </Carousel>
         </Category>
       ))}
     </>
